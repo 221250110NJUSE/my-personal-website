@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马瑞泽的个人主页</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        .jumbotron {
+            background-image: url('https://source.unsplash.com/random/1600x900');
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .jumbotron::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+        }
+        .jumbotron .container {
+            position: relative;
+            z-index: 1;
+        }
+        .skill-bar {
+            height: 20px;
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+        }
+        .skill-progress {
+            height: 100%;
+            background-color: #5D3F6A; /* 南京大学紫色 */
+            transition: width 1s ease-in-out;
+        }
+        .navbar, .btn-primary, footer {
+            background-color: #5D3F6A !important; /* 南京大学紫色 */
+        }
+        .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand {
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">马瑞泽的主页111</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">关于我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">教育经历</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">技能</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">项目</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .jumbotron {
+            background: linear-gradient(135deg, #5D3F6A, #8A6E96); /* 南京大学紫色渐变 */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+    
+    <header class="jumbotron jumbotron-fluid text-center py-5">
+        <div class="container">
+            <h1 class="display-4">马瑞泽</h1>
+            <p class="lead">南京大学软件工程专业学生 | 深度学习爱好者 | 创新研究者</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="about" class="mb-5">
+            <h2 class="mb-3">关于我</h2>
+            <p>我是马瑞泽，20岁，南京大学软件工程专业的在读本科生。我对深度学习和人工智能充满热情，致力于在这些领域进行创新研究。我的学习成绩优异，主要课程平均分达到90.2/100。</p>
+        </section>
+
+        <section id="education" class="mb-5">
+            <h2 class="mb-3">教育经历</h2>
+            <h4>南京大学 - 软件工程专业（2022.09-2026.06）</h4>
+            <p>学位课程均分：90.2/100</p>
+            <p>主修课程：深度学习理论探讨、大语言模型原理与应用、机器学习、大数据分析、计算机操作系统、数据结构与算法、计算机网络、计算机组织结构、编译原理、离散数学、线性代数、微积分等。</p>
+            <p>优秀课程成绩：微积分 93.4、线性代数 93、离散数学 93.2、计算机组织结构 94、计算机操作系统 93。</p>
+        </section>
+
+        <section id="skills" class="mb-5">
+            <h2 class="mb-3">技能</h2>
+            <div class="skill">
+                <h5>英文学术性阅读</h5>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h5>python</h5>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h5>c++</h5>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="88%"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-5">
+            <h2 class="mb-3">项目经验</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">面向异策略强化学习的经验回放改进方法研究</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2023.09-至今</h6>
+                            <p class="card-text">作为省级大创负责人，全程负责项目。探索基于异策略算法的经验回放的进一步优化，解决采样优先级不稳定，无法保证抽样序列与时间上的相关性等问题。旨在提高训练和策略优化的效率。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">腾讯犀牛鸟项目--基于文本指令的图像编辑任务</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">2024.08-至今</h6>
+                            <p class="card-text">参与项目全流程，主要负责编辑对象识别与编辑掩码获取工作。使用Grounding DINO和SAM模型，通过CLIP模型对齐文本提高检测准确性，使用BiRefNet优化掩码生成。负责撰写最终的项目报告。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="mb-3">联系方式</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>电话：</strong>13059050123</li>
+                <li class="list-group-item"><strong>邮箱：</strong>221250110@smail.nju.edu.cn</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2023 马瑞泽. 保留所有权利。</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script>
+        // 技能进度条动画
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        }
+
+        // 页面加载完成后执行动画
+        window.addEventListener('load', animateSkills);
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
